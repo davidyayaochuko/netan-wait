@@ -182,3 +182,51 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.timeline_item');
+    
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show-animation');
+            }
+        });
+    }, options);
+
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollIndicator = document.querySelector('.timeline_scroll_indicator');
+    const timelineContainer = document.querySelector('.timeline_items');
+    const timelineItems = document.querySelectorAll('.timeline_item');
+    
+    // Update indicator position on scroll
+    window.addEventListener('scroll', () => {
+        const containerRect = timelineContainer.getBoundingClientRect();
+        
+        // Find the currently visible dot
+        const visibleItem = [...timelineItems].find(item => {
+            const rect = item.getBoundingClientRect();
+            return rect.top <= window.innerHeight/2 && rect.bottom >= window.innerHeight/2;
+        });
+
+        if (visibleItem) {
+            const dot = visibleItem.querySelector('.timeline_dot');
+            const dotRect = dot.getBoundingClientRect();
+            // Calculate position relative to container
+            scrollIndicator.style.top = `${dotRect.top - containerRect.top}px`;
+        }
+    });
+});
