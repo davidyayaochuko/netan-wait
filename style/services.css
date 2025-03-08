@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 * {
     margin: 0;
@@ -133,6 +134,11 @@ body {
 
 a {}
 
+.upper li, .top, .left, .right, .bottom, .stop, .seq-item, .hero-title, .feature-card, .leftnav {
+    visibility: hidden;
+  }
+
+
 .cursor {
     z-index: 9999;
     border: 2px solid var(--primary_color);
@@ -177,6 +183,34 @@ a {}
     height: 100%;
     position: absolute;
     font-weight: 900;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  
+
+.dotsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.dots-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .dis {
@@ -252,7 +286,7 @@ svg .text_body {
     background-color: var(--primary_color);
     background-image: url(../img/Frame\ 1618868254.png);
     background-size: contain;
-    padding: 3rem 6% 8.5rem;
+    padding: 3rem 6% 2rem;
     position: relative;
 }
 
@@ -626,7 +660,7 @@ header .nav_bar ul li a span {
 }
 
 .section_one_sub_container {
-    padding: 11rem 2% 8rem;
+    padding: 11rem 2% 0rem;
     display: grid;
     gap: 20px;
     justify-content: center;
@@ -645,6 +679,8 @@ header .nav_bar ul li a span {
     background: radial-gradient(50% 144.68% at 17.57% 15.69%, #584AD2 15.5%, #B0A8FF 53%, #2D266C 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: "Audiowide", serif;
+
 }
 
 .gradient-text {
@@ -708,6 +744,23 @@ header .nav_bar ul li a span {
     text-decoration-skip-ink: none;
 }
 
+.section_one_sub_container_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: 1rem auto 0;
+
+
+}
+
+.section_one_sub_container_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
 
 
 .grouper {
@@ -720,7 +773,7 @@ header .nav_bar ul li a span {
 
 .grouper_two {
     position: absolute;
-    bottom: 11%;
+    bottom:8%;
     width: auto;
     height: auto;
     right: 0;
@@ -909,15 +962,22 @@ header .nav_bar ul li a span {
     align-items: center;
     margin: 20px auto;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 24rem;
     background-color: var(--span);
     border-radius: 30px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/Group\ 1630.png);
+    background-image: url(../img/Group\ 1637.png);
     background-position: bottom;
     position: relative;
     overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .section_three_sub_container {
@@ -961,11 +1021,27 @@ header .nav_bar ul li a span {
 }
 
 
+@keyframes scaleEffect {
+    0% {
+        transform: scale(1);
+    }
+
+50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .section_three_sub_img_1 {
     position: absolute;
     width: 10%;
     bottom: -15px;
     left: 5%;
+    animation-delay: 3s;
+    animation: scaleEffect 7s ease-in-out both infinite;
 }
 
 .section_three_sub_img_2 {
@@ -973,6 +1049,8 @@ header .nav_bar ul li a span {
     bottom: -5px;
     width: 7%;
     left: 45%;
+    animation-delay: 9s;
+    animation: scaleEffect 3s ease-in-out both infinite;
 }
 
 .section_three_sub_img_3 {
@@ -980,8 +1058,8 @@ header .nav_bar ul li a span {
     bottom: -5px;
     right: 5%;
     width: 22%;
+    animation: scaleEffect 5s ease-in-out both infinite;
 }
-
 
 
 .section_four {
@@ -1394,6 +1472,11 @@ footer {
         max-width: 100%;
     }
 
+    .section_one_sub_container_img {
+        padding-top: 2rem;
+        width: 70%;
+    }
+
     .section_two_sub_container {
         width: 100%;
         max-width: 80%;
@@ -1440,6 +1523,10 @@ footer {
 
     .section_one_sub_container_text_link a {
         padding: 15px 30px;
+    }
+
+    .section_one_sub_container_img {
+        width: 80%;
     }
 
     .section_four_sub_container {
@@ -1520,7 +1607,7 @@ footer {
     }
 
     .head_setion_two .head_setion_two_box p {
-        font-size: .7em;
+        font-size: .5em;
     }
 
     .head_setion_two h2 {
