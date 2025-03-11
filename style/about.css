@@ -708,6 +708,7 @@ header .nav_bar ul li a span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Audiowide", serif;
+    margin: 15px 0;
 
 }
 
@@ -1577,6 +1578,10 @@ footer {
 
 @media (max-width: 580px) {
 
+    header {
+        padding: 1rem 2rem;
+    }
+
     .dropdown_content_text h2 {
         font-family: Anek Gurmukhi;
         font-size: 1.6em;
@@ -1609,6 +1614,7 @@ footer {
     .section_one_sub_container_text p {
         font-family: Inter;
         font-size: 1.4em;
+        margin: 15px 0;
     }
 
     .section_one_sub_container_text_link {
