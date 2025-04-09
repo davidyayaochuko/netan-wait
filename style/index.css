@@ -160,9 +160,18 @@ a {}
     border-radius: 50%;
 }
 
-.upper li, .top, .left, .right, .bottom, .stop, .seq-item, .hero-title, .feature-card, .leftnav {
+.upper li,
+.top,
+.left,
+.right,
+.bottom,
+.stop,
+.seq-item,
+.hero-title,
+.feature-card,
+.leftnav {
     visibility: hidden;
-  }
+}
 
 
 .loader {
@@ -172,13 +181,22 @@ a {}
     width: 100%;
     left: 0;
     height: 100vh;
-    background: url(../img/Group\ 1637.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
     align-items: center;
     justify-content: center;
-    background-color: linear-gradient(var(--tertiary_color) var(--var_tertiary_color));
+    background: linear-gradient(
+        to bottom,
+        #5a3450 0%,
+        #2d266c 45%,
+        #2d266c 55%,
+        #5a3450 100%
+      );
+      filter: blur(0.5px);
+      
+
+
     overflow-y: hidden;
 
 }
@@ -197,8 +215,8 @@ a {}
     z-index: 1;
     top: 0;
     left: 0;
-  }
-  
+}
+
 
 .dots-canvas {
     position: absolute;
@@ -438,12 +456,12 @@ header .nav_bar ul li button {
 }
 
 .dropdown_content_sub {
-display: grid;
-grid-template-columns: 70% 30%;
-align-items: center;
-justify-content: space-between;
-gap: 30px;
-padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 2rem;
 }
 
 .dropdown_content_sub_text {
@@ -474,7 +492,7 @@ padding: 0 2rem;
     margin-bottom: 1rem;
 }
 
-.dropdown_content_text h2{
+.dropdown_content_text h2 {
     font-family: Anek Gurmukhi;
     font-size: 25px;
     font-weight: 600;
@@ -485,7 +503,7 @@ padding: 0 2rem;
     -webkit-text-fill-color: transparent;
 }
 
-.dropdown_content_text p{
+.dropdown_content_text p {
     font-family: Anek Gurmukhi;
     font-size: 15px;
     font-weight: 400;
@@ -782,7 +800,7 @@ header .nav_bar ul li a span {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    
+
 }
 
 .floating_image {
@@ -1098,7 +1116,7 @@ canvas {
         transform: scale(1);
     }
 
-50% {
+    50% {
         transform: scale(1.1);
     }
 
@@ -1154,7 +1172,7 @@ canvas {
 .section_four_sub_container {
     display: grid;
     width: 100%;
-    max-width: 80% ;
+    max-width: 80%;
     margin: auto;
     grid-template-columns: 57% 36%;
     gap: 1%;
@@ -1295,10 +1313,12 @@ canvas {
         transform: translateX(-50%) scale(1);
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
     }
+
     50% {
         transform: translateX(-50%) scale(1.2);
         box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
     }
+
     100% {
         transform: translateX(-50%) scale(1);
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
@@ -1904,7 +1924,7 @@ footer {
         padding: 11rem 6% 0;
     }
 
-  
+
     header {
         width: 100%;
         max-width: 90%;
@@ -1917,7 +1937,7 @@ footer {
         z-index: 888;
         margin: 2rem 6%;
     }
-    
+
     header .nav_bar {
         width: 100%;
         height: 0;
@@ -1929,15 +1949,18 @@ footer {
         transition: 0s;
         border: 0px solid;
         border-radius: 0;
-        overflow: hidden; /* Hide overflow by default */
+        overflow: hidden;
+        /* Hide overflow by default */
     }
-    
+
     .nav_bar.navigation {
         top: 0;
         width: 100%;
-        height: 100vh; /* Full viewport height */
+        height: 100vh;
+        /* Full viewport height */
         padding-bottom: 10%;
-        overflow-y: auto; /* Enable vertical scrolling */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
     }
 
     .nav_bar.navigation::after {
@@ -2066,18 +2089,18 @@ footer {
         letter-spacing: 2px;
         width: 100%;
     }
-    
-    
-    
+
+
+
     .phoneSize svg .text_body {
         stroke: var(--primary_color);
         animation: 5s 1 alternate animate_stroke;
     }
-    
+
     .phoneSize {
         display: block;
     }
-    
+
 
     .dropdown_content_sub {
         grid-template-columns: 100%;
@@ -2197,10 +2220,12 @@ footer {
             transform: translateX(-50%) scale(1);
             box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
         }
+
         50% {
             transform: translateX(-50%) scale(1.1);
             box-shadow: 0 0 0 4px rgba(255, 255, 255, 0);
         }
+
         100% {
             transform: translateX(-50%) scale(1);
             box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
@@ -2279,6 +2304,7 @@ footer {
         font-family: Anek Gurmukhi;
         font-size: 1.6em;
     }
+
     .dropdown_content_text p {
         font-family: Anek Gurmukhi;
         font-size: 1.2em;
@@ -2294,7 +2320,7 @@ footer {
         letter-spacing: 2px;
         width: 100%;
     }
-    
+
 
     .section_one_sub_container {
         grid-template-columns: 100%;
@@ -2326,7 +2352,7 @@ footer {
         line-height: 1.4;
     }
 
-  
+
 
     .head_setion_two_box {
         width: 100%;
